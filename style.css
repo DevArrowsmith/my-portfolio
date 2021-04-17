@@ -15,13 +15,14 @@ body {
     color: var(--grey-1);
 }
 
-header, section, footer {
-    min-height: 100vh;
+section, footer {
+    height: 100vh;
 }
 
 header {
-    position: relative;
+    height: calc(100vh - 60px);
     padding-top: 60px;
+    position: relative;
 }
 
 header>div {
@@ -38,10 +39,8 @@ header>div {
     align-items: center;
 }
 
-header>div>div {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+h1 {
+    text-transform: uppercase;
 }
 
 nav>a {
@@ -53,8 +52,11 @@ nav>a {
 
 header p {
     position: absolute;
-    top: 50vh;
+    top: calc(50vh - 2.5rem);
+    left: 4rem;
+    width: calc(45% - 4rem);
     color: var(--grey-1);
+    font-size: 2.5rem;
 }
 
 img {
