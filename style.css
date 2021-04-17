@@ -59,6 +59,13 @@ header p {
     font-size: 2.5rem;
 }
 
-img {
-    height: 500px;
+header img {
+    position: absolute;
+    top: calc(50% - 300px + 30px);
+    right: 6rem;
+    height: 600px;
+    width: 400px;
+    object-fit: cover;
+    object-position: -5px 0;
+    
 }
