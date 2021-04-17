@@ -123,6 +123,7 @@ header img {
 
 #projects>p {
     padding: 0 0 2rem 5rem;
+    font-size: 1.1rem;
 }
 
 #projects-grid {
@@ -146,40 +147,52 @@ header img {
 }
 
 #projects-grid div {
-    padding: 3rem 2rem 0 2rem;;
+    padding: 2rem 2rem 0 2rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 } 
 
-#projects-grid h3 {
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
-}
-
-#projects-grid a {
+#projects-grid div>a {
     color: var(--grey-1);
     text-decoration: none;
-    font-size: 1rem;
-}
-
-#projects-grid h3>a{
-    font-size: 1.8rem;
-    color: var(--yellow-1);
-    background-color: var(--grey-1);
-}
-
-#projects-grid h3>a:hover{
-    text-decoration: underline;
-}
-
-#projects-grid div>a {
-    font-size: 1.2rem;
-    padding-top: 0.5rem;
 }
 
 #projects-grid div>a:hover {
     text-decoration: underline;
+}
+
+#projects-grid h3 {
+    font-size: 1.8rem;
+}
+
+#projects-grid p {
+    font-size: 1.1rem;
+    padding-top: 1rem;
+}
+
+#projects-grid p>a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--yellow-1);
+    background-color: var(--grey-1);
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+#projects-grid p>a:hover{
+    text-decoration: underline;
+}
+
+#projects-grid div>a:not(:first-child) {
+    font-size: 1.1rem;
+}
+
+#projects-grid p+a {
+    padding-top: 1.0rem;
+}
+
+#projects-grid a+a {
+    padding-top: 0.3rem;
 }
 
 div.project-1 {
