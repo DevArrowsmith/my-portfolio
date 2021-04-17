@@ -15,11 +15,6 @@ body {
     color: var(--grey-1);
 }
 
-.dark-mode {
-    background-color: var(--grey-1);
-    color: var(--white);
-}
-
 header, section, footer {
     min-height: 100vh;
 }
