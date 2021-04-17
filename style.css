@@ -19,6 +19,10 @@ body {
     color: var(--white);
 }
 
+header, section, footer {
+    min-height: 100vh;
+}
+
 img {
     height: 500px;
 }
