@@ -2,6 +2,7 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
+    --yellow-1: #f4eddd; 
 }
 
 html {
@@ -28,7 +29,7 @@ header {
     padding-top: 60px;
     position: relative;
 
-    background: #f4eddd;
+    background: var(--yellow-1);
 }
 
 header>div {
@@ -73,7 +74,10 @@ header img {
     width: 400px;
     object-fit: cover;
     object-position: -5px 0;
+}
 
+#about {
+    background-color: #58B09C;
 }
 
 #about h2 {
@@ -86,5 +90,24 @@ header img {
     padding: 0 0 1rem 5rem;
     width: calc(50% - 4rem);
     font-size: 1.2rem;
+}
 
+#skillset>h2 {
+    padding: 05rem 0 3rem 5rem;
+    font-size: 2rem;
+}
+
+#skillset>ul {
+    list-style-type: none;
+    padding-left: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#skillset>ul>li {
+    width: 10rem;
+    height: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
