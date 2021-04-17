@@ -127,7 +127,6 @@ header img {
 }
 
 #projects-grid {
-    list-style-type: none;
     margin: 0 5rem 0 5rem;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -233,7 +232,7 @@ img.project-2 {
 
 #interests h2 {
     width: 100%;
-    height: 12%;
+    height: 10%;
     font-size: 2rem;
     display: flex;
     flex-flow: row nowrap;
@@ -241,5 +240,59 @@ img.project-2 {
     align-items: center;
 }
 
+#interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 30vh);
+    grid-gap: 0;
+}
+
+#interests-grid>div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.interests-exercise {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/exercise.jpeg");
+}
+
+
+.interests-music {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/music.jpeg");
+}
+
+.interests-reading {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/reading.jpeg");
+}
+
+.interests-tech {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/tech.jpeg");
+}
+
+.interests-gaming {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/gaming.jpeg");
+}
+
+.interests-lifestyle {
+    background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("./assets/interests/lifestyle.jpeg");
+}
+
+#interests h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#interests li {
+    list-style-type: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 0.2rem;
+}
 
 
