@@ -4,6 +4,10 @@
     --grey-2: #202020;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,10 +66,10 @@ header p {
 header img {
     position: absolute;
     top: calc(50% - 300px + 30px);
-    right: 6rem;
+    right: calc(30% - 200px);
     height: 600px;
     width: 400px;
     object-fit: cover;
     object-position: -5px 0;
-    
+
 }
