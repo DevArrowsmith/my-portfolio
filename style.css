@@ -2,7 +2,7 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
-    --yellow-1: #f4eddd; 
+    --yellow-1: #f4eddd;
 }
 
 html {
@@ -22,6 +22,10 @@ body {
 
 section, footer {
     height: 100vh;
+}
+
+#projects {
+    height: auto;
 }
 
 header {
@@ -126,16 +130,66 @@ header img {
     margin: 0 5rem 0 5rem;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(4, 10rem);
+    grid-template-rows: repeat(4, 20rem);
     grid-gap: 0;
+    grid-template-areas:
+    "p1-img p1-content"
+    "p2-content p2-img"
+    "p3-img p3-content"
+    "p4-content p4-img";
 }
 
-#projects img{
+#projects-grid img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+#projects-grid div {
+    padding: 3rem 2rem 0 2rem;;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+} 
 
+#projects-grid h3 {
+    font-size: 1.8rem;
+}
 
+#projects-grid a {
 
+    color: var(--grey-1);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+div.project-1 {
+    grid-area: p1-content;
+}
+
+img.project-1 {
+    grid-area: p1-img;
+}
+
+div.project-2 {
+    grid-area: p2-content;
+}
+img.project-2 {
+    grid-area: p2-img;
+}
+
+div.project-3 {
+    grid-area: p3-content;
+}
+
+img.project-3 {
+    grid-area: p3-img;
+}
+
+div.project-4 {
+    grid-area: p4-content;
+}
+
+img.project-4 {
+    grid-area: p4-img;
+}
