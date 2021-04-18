@@ -113,24 +113,46 @@ header img {
     background-color: #58B09C;
 }
 
-#skillset>h2 {
-    padding: 05rem 0 3rem 5rem;
-    font-size: 2rem;
+#skillset * {
+    color: var(--white);
 }
 
-#skillset>ul {
-    list-style-type: none;
-    padding-left: 5rem;
+#skillset>div {
+    height: 90%;
+    padding: 0 30%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-#skillset>ul>li {
-    width: 10rem;
+#skillset h2 {
+    font-size: 2rem;
+    padding-bottom: 5rem;
+}
+
+#skillset ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#skillset ul li {
+    width: 7rem;
     height: 2rem;
+    margin: 1rem 2rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+#skillset svg {
+    fill: var(--white);
+    height: 2rem;
+    width: 2rem;
 }
 
 #projects h2 {
