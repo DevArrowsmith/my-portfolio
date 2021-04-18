@@ -138,7 +138,7 @@ header img {
     row-gap: 2rem;
 }
 
-#projects-grid>div {
+#projects-grid div {
     padding: 0 16rem 0 5rem;
     display: flex;
     flex-flow: column nowrap;
@@ -146,15 +146,16 @@ header img {
     align-items: right;
 }
 
-#projects-grid span {
-    display: flex; 
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-}
-
 div.project-1 {
     grid-area: project-1;
     background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.1), rgba(200, 210, 225, 0.2)), url("./assets/projects/architect.png");
+    background-position: center;
+    background-size: cover;
+}
+
+div.project-1:hover {
+    background: linear-gradient(0.25turn, rgba(0, 10, 25, 0.5), rgba(0, 10, 25, 0.4)), url("./assets/projects/architect.png");
+    background-position: center;
     background-size: cover;
 }
 
@@ -165,6 +166,12 @@ div.project-2 {
     background-position: center;
 }
 
+div.project-2:hover {
+    background: linear-gradient(0.25turn, rgba(0, 0, 15, 0.3), rgba(0, 0, 15, 0.4)), url("./assets/projects/spacefrens.png");
+    background-position: center;
+    background-size: cover;
+}
+
 div.project-3 {
     grid-area: project-3;
     background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.1), rgba(225, 210, 225, 0.2)), url("./assets/projects/pokedex.png");
@@ -172,11 +179,30 @@ div.project-3 {
     background-position: center;
 }
 
+div.project-3:hover {
+    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("./assets/projects/pokedex.png");
+    background-position: center;
+    background-size: cover;
+}
+
 div.project-4 {
     grid-area: project-4;
     background: linear-gradient(0.25turn, rgba(90, 20, 10, 0.2), rgba(90, 20, 10, 0.1)), url("./assets/projects/platformer-crop.png");
     background-size: cover;
     background-position: center;
+}
+
+div.project-4:hover {
+    grid-area: project-4;
+    background: linear-gradient(0.25turn, rgba(15, 10, 0, 0.5), rgba(15, 10, 0, 0.4)), url("./assets/projects/platformer-crop.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#projects-grid span {
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: flex-start;
 }
 
 
