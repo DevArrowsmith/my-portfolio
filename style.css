@@ -138,14 +138,6 @@ header img {
     row-gap: 2rem;
 }
 
-#projects-grid div {
-    padding: 0 16rem 0 5rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: right;
-}
-
 div.project-1 {
     grid-area: project-1;
     background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.1), rgba(200, 210, 225, 0.2)), url("./assets/projects/architect.png");
@@ -199,12 +191,35 @@ div.project-4:hover {
     background-position: center;
 }
 
+#projects-grid div {
+    padding: 0 16rem 0 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: right;
+}
+
 #projects-grid span {
     display: flex; 
     flex-flow: row nowrap;
     justify-content: flex-start;
 }
 
+#projects-grid h3 {
+    font-size: 1.8rem;
+}
+
+#projects-grid p {
+    font-size: 1.1rem;
+}
+
+#projects-grid p, #projects-grid a {
+    width:fit-content;
+    background: rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+    color: var(--white);
+}
 
 #projects-grid a {
     text-decoration: none;
@@ -218,41 +233,15 @@ div.project-4:hover {
     margin-right: 1rem;
 }
 
-#projects-grid p, #projects-grid a {
-    width:fit-content;
-    background: rgba(0, 0, 0, 0.6);
-    margin-bottom: 1rem;
-    padding: 0.2rem 0.5rem;
-    color: var(--white);
-}
-
-#projects-grid h3 {
-    font-size: 1.8rem;
-}
-
-#projects-grid p {
-    font-size: 1.1rem;
-
-}
-
 #projects-grid p>a{
     text-decoration: none;
     font-size: 1.1rem;
     padding: 0 0.2rem 0 0.2rem;
 }
 
-#projects-grid p>a:hover{
-    text-decoration: underline;
-}
-
 #projects-grid div>a:not(:first-child) {
     font-size: 1.1rem;
 }
-
-img.project-2 {
-    object-fit: cover;
-}
-
 
 #interests h2 {
     width: 100%;
