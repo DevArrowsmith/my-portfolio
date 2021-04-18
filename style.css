@@ -126,14 +126,7 @@ header img {
     align-items: center;
 }
 
-#projects>p {
-    padding-bottom: 2rem;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
 #projects-grid {
-    margin: 0 5rem 0 5rem;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(4, 20rem);
@@ -142,6 +135,14 @@ header img {
     "p2-content p2-img"
     "p3-img p3-content"
     "p4-content p4-img";
+}
+
+div.project-1, div.project-3 {
+    text-align: left;
+}
+
+div.project-2, div.project-4 {
+    text-align: right;
 }
 
 div.project-1 {
@@ -182,10 +183,11 @@ img.project-4 {
 }
 
 #projects-grid div {
-    padding: 2rem 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
 } 
 
 #projects-grid div>a {
@@ -204,6 +206,7 @@ img.project-4 {
 #projects-grid p {
     font-size: 1.1rem;
     padding-top: 1rem;
+
 }
 
 #projects-grid p>a{
