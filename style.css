@@ -149,6 +149,11 @@ header img {
     align-items: center;
 }
 
+#skillset i {
+    fill: var(--white);
+    font-size: 2rem;
+}
+
 #skillset svg {
     fill: var(--white);
     height: 2rem;
