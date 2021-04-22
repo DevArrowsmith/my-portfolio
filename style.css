@@ -149,10 +149,20 @@ header>a>i {
     font-size: 1.2rem;
 }
 
-#about span {
+#about p>span {
     background: var(--grey-1);
     padding: 0 0.4rem;
     color: var(--white);
+}
+
+#about div>span {
+    text-align: center;
+}
+
+#about a>i {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--grey-1);
 }
 
 #skillset {
