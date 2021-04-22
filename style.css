@@ -2,7 +2,9 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
+    --grey-3:  #9DA2AB;
     --yellow-1: #f4eddd;
+    --yellow-2: #fff4ed;
 }
 
 html {
@@ -33,7 +35,19 @@ header {
     padding-top: 60px;
     position: relative;
     background: var(--yellow-1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
+
+/* header {
+    Use media query to remove display: flex for display: block.
+    height: calc(100vh - 60px);
+    padding-top: 60px;
+    position: relative;
+    background: var(--yellow-1);
+} */
 
 header>div {
     height: 60px;
@@ -54,21 +68,10 @@ h1 {
     text-transform: uppercase;
 }
 
-
 header p {
     color: var(--white);
     font-size: 2rem;
     font-weight: bold;
-}
-
-header>p {
-    position: absolute;
-    top: calc(50vh - 2.5rem);
-    left: 4rem;
-    width: calc(45% - 4rem);
-
-    color: var(--grey-1);
-    font-size: 2.5rem;
 }
 
 @media(min-width: 900px) {
@@ -81,23 +84,71 @@ header>p {
     }
 }
 
+header img:first-of-type {
+    width: 60vw;
+    border-radius: 30vw;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+header img:nth-of-type(2) {
+    display: none;
+}
+
+
+@media(min-width: 900px) {
+    header img:first-of-type {
+        display: none;
+    }
+    
+    header img:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    top: calc(50% - 270px);
+    right: calc(4rem + 2%);
+    height: 525px;
+    width: 40%;
+    border-radius: 3px;
+    object-fit: cover;
+    object-position: -70px 0;
+    -moz-box-shadow: -8px -8px 24px 0 var(--yellow-2), 8px 8px 24px 0 var(--grey-3);
+    -webkit-box-shadow: -8px -8px 24px 0 var(--yellow-2), 8px 8px 24px 0 var(--grey-3);
+    box-shadow: -8px -8px 24px 0 var(--yellow-2), 8px 8px 24px 0 var(--grey-3);
+    }
+}
+
+@media(min-width: 1225px) {
+    
+    header img:nth-of-type(2) {
+    top: calc(50% - 300px);
+    height: 600px;
+    }
+}
+
+header>p {
+    width: 80%;
+    font-size: 1.4rem;
+    color: var(--grey-1);
+    text-align: center;
+}
+
+@media(min-width: 900px) {
+    
+    header>p {
+        position: absolute;
+        top: calc(50vh - 2.5rem);
+        left: 4rem;
+        font-size: 2.2rem;
+        width: calc(50% - 4rem);
+    }
+}
+
 
 nav>a {
     text-decoration: none;
     color: var(--white);
     font-size: 1.5rem;
     padding-right: 1rem;
-}
-
-header img {
-    display: none;
-    position: absolute;
-    top: calc(50% - 300px + 30px);
-    right: calc(30% - 200px);
-    height: 600px;
-    width: 400px;
-    object-fit: cover;
-    object-position: -5px 0;
 }
 
 #about>div {
