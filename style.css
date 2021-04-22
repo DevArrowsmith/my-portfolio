@@ -50,8 +50,37 @@ header>div {
 }
 
 h1 {
+    display: none;
     text-transform: uppercase;
 }
+
+
+header p {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header>p {
+    position: absolute;
+    top: calc(50vh - 2.5rem);
+    left: 4rem;
+    width: calc(45% - 4rem);
+
+    color: var(--grey-1);
+    font-size: 2.5rem;
+}
+
+@media(min-width: 900px) {
+    h1 {
+        display: inline;
+    }
+
+    header>div>p {
+        display: none;
+    }
+}
+
 
 nav>a {
     text-decoration: none;
@@ -60,16 +89,8 @@ nav>a {
     padding-right: 1rem;
 }
 
-header p {
-    position: absolute;
-    top: calc(50vh - 2.5rem);
-    left: 4rem;
-    width: calc(45% - 4rem);
-    color: var(--grey-1);
-    font-size: 2.5rem;
-}
-
 header img {
+    display: none;
     position: absolute;
     top: calc(50% - 300px + 30px);
     right: calc(30% - 200px);
