@@ -156,6 +156,10 @@ header>a>i {
 }
 
 #skillset {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
     background-color: var(--green-1);
 }
 
@@ -202,4 +206,10 @@ header>a>i {
     fill: var(--white);
     height: 1rem;
     width: 1rem;
+}
+
+#skillset>a>i {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--white);
 }
