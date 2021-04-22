@@ -24,10 +24,12 @@ body {
 
 section, footer {
     height: 100vh;
+    width: 100vw;
 }
 
 #projects {
     height: auto;
+    width: 100vw;
 }
 
 header {
@@ -40,14 +42,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-/* header {
-    Use media query to remove display: flex for display: block.
-    height: calc(100vh - 60px);
-    padding-top: 60px;
-    position: relative;
-    background: var(--yellow-1);
-} */
 
 header>div {
     height: 60px;
