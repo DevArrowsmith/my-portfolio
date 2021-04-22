@@ -2,7 +2,8 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
-    --yellow-1: #f4eddd;
+    --yellow-1: #F4EDDD;
+    --green-1: #58B09C;
 }
 
 html {
@@ -152,4 +153,53 @@ header>a>i {
     background: var(--grey-1);
     padding: 0 0.4rem;
     color: var(--white);
+}
+
+#skillset {
+    background-color: var(--green-1);
+}
+
+#skillset * {
+    color: var(--white);
+}
+
+#skillset>div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#skillset h2 {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+#skillset ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#skillset ul li {
+    width: 6rem;
+    height: 2rem;
+    margin: 0.5rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#skillset i {
+    fill: var(--white);
+    font-size: 1rem;
+}
+
+#skillset svg {
+    fill: var(--white);
+    height: 1rem;
+    width: 1rem;
 }
