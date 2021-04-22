@@ -34,9 +34,60 @@ header>div {
     top: 0;
     width: calc(100% - 2rem);
     padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    display: none;
+}
+
+header>div>p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header i {
+    height: 60px;
+    width: calc(40vw - 10px);
+    text-align: right;
+    font-size: 2.4em;
+}
+
+header i:before {
+    line-height: 60px;
+}
+
+header i + nav {
+    display: none;
+    position: absolute;
+    width: 40vw;
+    background: var(--grey-2);
+    right: 0;
+    top: 100%;
+}
+
+header i:hover + nav, header i:focus + nav, header nav:hover, header nav:focus {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header a:last-of-type {
+    padding-bottom: 2rem;
 }
 
 img {
-    max-width: 50vw;
+    max-width: 50%;
 }
 
