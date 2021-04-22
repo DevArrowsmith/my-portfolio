@@ -5,6 +5,9 @@
     --yellow-1: #f4eddd;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
