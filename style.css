@@ -223,3 +223,16 @@ header>a>i {
     font-size: 2rem;
     color: var(--white);
 }
+
+#projects {
+    width: 90vw;
+    padding: 5vw;
+}
+
+#projects h2 {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
