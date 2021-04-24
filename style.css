@@ -361,3 +361,22 @@ div.project-4 {
 #interests .fa-caret-down {
     color: var(--grey-1);
 }
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer hr {
+    width: 10rem;
+    height: 0.2rem;
+    margin: 1rem 0 2rem 0;
+    border: none;
+    background-color: var(--grey-1);
+}
+
+footer a {
+    margin: 0 0.2rem;
+}
