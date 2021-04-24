@@ -372,6 +372,7 @@ div.project-4 {
 }
 
 footer {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -386,6 +387,24 @@ footer hr {
     background-color: var(--grey-1);
 }
 
-footer a {
+footer div>a {
     margin: 0 0.2rem;
+}
+
+footer span {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2rem;
+    height: 20%;
+    text-align: center;
+
+}
+
+footer span>a {
+    text-decoration: none;
+    color: var(--grey-1);
+}
+
+footer i {
+    font-size: 2rem;
 }
