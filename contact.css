@@ -33,18 +33,15 @@ div:first-of-type {
     align-items: center;
 }
 
-
-#top-bar p:first-of-type {
+#top-bar p {
     color: var(--white);
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 #top-bar p:last-of-type {
-    color: var(--white);
     display: none;
-    font-size: 2rem;
-    font-weight: bold;
 }
 
 @media (min-width: 500px) {
