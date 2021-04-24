@@ -234,7 +234,7 @@ header .fa-caret-down {
 
 #projects {
     width: calc(100% - 2rem);
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
 }
 
 #projects h2 {
@@ -306,6 +306,7 @@ div.project-4 {
 
 #interests {
     background-color: var(--orange-1);
+    padding-bottom: 2rem;
 }
 
 #interests h2 {
@@ -363,7 +364,11 @@ div.project-4 {
 }
 
 #interests .fa-caret-down {
-    color: var(--grey-1);
+    color: var(--white);
+}
+
+#interests span {
+    padding-top: 2rem;
 }
 
 footer {
