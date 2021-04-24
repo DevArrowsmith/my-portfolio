@@ -4,6 +4,7 @@
     --grey-2: #202020;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
+    --orange-1: #F68265;
 }
 
 html {
@@ -305,9 +306,14 @@ div.project-4 {
     color: var(--grey-1);
 }
 
+#interests {
+    background-color: var(--orange-1);
+}
+
 #interests h2 {
     padding: 1.5rem 0;
     font-size: 2rem;
+    color: white;
     text-align: center;
 }
 
