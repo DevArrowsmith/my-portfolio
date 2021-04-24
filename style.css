@@ -123,17 +123,13 @@ header nav>a:last-of-type {
     padding-bottom: 2rem;
 }
 
-header img:first-of-type {
+header img {
     width: 60vw;
     max-width: 50vh;
     max-height: 50vh;
     border-radius: 30vw;
     object-fit: cover;
     margin-bottom: 30px;
-}
-
-header img:nth-of-type(2) {
-    display: none;
 }
 
 header>p {
