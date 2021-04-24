@@ -68,7 +68,7 @@ header>div>p {
 
 header div>i {
     height: 60px;
-    width: calc(40vw - 10px);
+    width: calc(120px - 1rem);
     text-align: right;
     font-size: 2.4em;
 }
@@ -80,7 +80,7 @@ header div>i:before {
 header div>i + nav {
     display: none;
     position: absolute;
-    width: 40vw;
+    width: 120px;
     background: var(--grey-2);
     right: 0;
     top: 100%;
