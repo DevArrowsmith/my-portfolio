@@ -420,7 +420,7 @@ div.project-4 {
     color: var(--white);
 }
 
-#projects-grid span>a {
+#projects-container span>a {
     margin-right: 1rem;
 }
 
@@ -431,6 +431,47 @@ div.project-4 {
 #interests {
     background-color: var(--orange-1);
     padding-bottom: 2rem;
+}
+
+@media (min-width: 500px) {
+
+    #projects h2 {
+        padding-bottom: 2.5rem;
+    }
+
+    #projects-container {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 20rem);
+        grid-template-areas:
+        ". project-1 project-1 project-1 project-1 project-1 project-1 . . ."
+        ". . . project-2 project-2 project-2 project-2 project-2 project-2 ."
+        ". project-3 project-3 project-3 project-3 project-3 project-3 . . ."
+        ". . . project-4 project-4 project-4 project-4 project-4 project-4 .";
+        row-gap: 1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    #projects-container>div {
+        height: auto;
+        width: auto;
+        margin-bottom: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    #projects {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #projects-container {
+        width: 1160px;
+    }
 }
 
 #interests h2 {
