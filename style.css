@@ -2,11 +2,14 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
-    --yellow-1: #f4eddd;
+    --yellow-1: #F4EDDD;
+    --green-1: #58B09C;
+    --orange-1: #F68265;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 * {
@@ -18,30 +21,54 @@ html {
 body {
     background-color: var(--white);
     color: var(--grey-1);
+    overflow-x: hidden;
 }
 
-section, footer {
-    height: 100vh;
+header, section, footer {
+    width: 100vw;
 }
 
-#projects {
-    height: auto;
+header, #about, #skillset, footer {
+    height: calc(100vh - 60px);
+}
+
+.section-link-container {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-caret-down, .fa-caret-up {
+    font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+    .fa-caret-down, .fa-caret-up {
+        font-size: 3rem;
+    }
 }
 
 header {
-    height: calc(100vh - 60px);
     padding-top: 60px;
-    position: relative;
     background: var(--yellow-1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 header>div {
+    z-index: 1;
     height: 60px;
     color: var(--white);
     background-color: var(--grey-2);
-    position: absolute;
-    top: 0px;
-    width: calc(100% - 2rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 2rem);
     padding: 0 1rem 0 1rem;
     display: flex;
     flex-flow: row nowrap;
@@ -50,33 +77,99 @@ header>div {
 }
 
 h1 {
-    text-transform: uppercase;
+    display: none;
 }
 
-nav>a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    padding-right: 1rem;
+header>div>p {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-header p {
+header div>i {
+    height: 60px;
+    width: calc(120px - 1rem);
+    text-align: right;
+    font-size: 2.4em;
+}
+
+header div>i:before {
+    line-height: 60px;
+}
+
+header nav {
+    display: none;
     position: absolute;
-    top: calc(50vh - 2.5rem);
-    left: 4rem;
-    width: calc(45% - 4rem);
-    color: var(--grey-1);
-    font-size: 2.5rem;
+    width: 120px;
+    background: var(--grey-2);
+    right: 0;
+    top: 100%;
+}
+
+header i:hover + nav, header i:focus + nav, header nav:hover, header nav:focus {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+header nav>a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header nav>a:last-of-type {
+    padding-bottom: 2rem;
 }
 
 header img {
-    position: absolute;
-    top: calc(50% - 300px + 30px);
-    right: calc(30% - 200px);
-    height: 600px;
-    width: 400px;
+    width: 60vw;
+    max-width: 50vh;
+    max-height: 50vh;
+    border-radius: 30vw;
     object-fit: cover;
-    object-position: -5px 0;
+    margin-bottom: 30px;
+}
+
+header>p {
+    width: 80%;
+    max-width: 45rem;
+    font-size: 1.4rem;
+    color: var(--grey-1);
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+header .fa-caret-down {
+    color: var(--grey-1);
+}
+
+@media (min-width: 600px) {
+    header h1 {
+        display: inline;
+        text-transform: uppercase;
+    }
+
+    header div>p {
+        display: none;
+    }
+
+    header p {
+        font-size: 2rem;
+    }
+
+    header nav {
+        width: 200px;
+    }
+
+    header nav>a {
+        font-size: 2rem;
+    }
+}
+
+#about {
+    position: relative;
 }
 
 #about>div {
@@ -103,84 +196,191 @@ header img {
     font-size: 1.2rem;
 }
 
-#about span {
+#about p>span {
     background: var(--grey-1);
     padding: 0 0.4rem;
     color: var(--white);
 }
 
+#about>div>span {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+#about .fa-caret-down {
+    color: var(--grey-1);
+}
+
+@media (min-width: 600px) {
+    #about h2, #about p:first-of-type {
+        padding-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    #about p {
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+}
+
 #skillset {
-    background-color: #58B09C;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green-1);
 }
 
 #skillset * {
     color: var(--white);
 }
 
-#skillset>div {
-    height: 90%;
-    padding: 0 30%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
 #skillset h2 {
+    position: absolute;
+    top: 0;
+    padding: 1.5rem 0;
     font-size: 2rem;
-    padding-bottom: 5rem;
 }
 
 #skillset ul {
+    max-width: 1000px;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #skillset ul li {
-    width: 7rem;
+    width: 6rem;
     height: 2rem;
-    margin: 1rem 2rem;
+    margin: 0.5rem 2rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-#skillset i {
+#skillset li>i {
     fill: var(--white);
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #skillset svg {
     fill: var(--white);
-    height: 2rem;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+#skillset>span {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+#skillset .fa-caret-down {
+    color: var(--white);
+}
+
+@media (min-width: 400px) {
+
+    #skillset>ul {
+        padding: 0 3rem;
+    }
+
+    #skillset ul>li {
+        width: 6.5rem;
+        font-size: 1.1rem;
+        margin: 0.7rem 1.2rem;
+    }
+
+    #skillset li>i {
+        font-size: 1.1rem;
+    }
+
+    #skillset svg {
+        height: 1.1rem;
+        width: 1.1rem;
+    }
+}
+
+
+@media (min-width: 500px) {
+
+    #skillset>ul {
+        padding: 0 3rem;
+    }
+
+    #skillset ul>li {
+        width: 8rem;
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+    }
+
+    #skillset li>i {
+        font-size: 1.2rem;
+    }
+
+    #skillset svg {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+    #skillset>ul {
+        padding: 0 3rem;
+    }
+
+    #skillset ul>li {
+        width: 10rem;
+        font-size: 1.5rem;
+        margin: 1rem 3rem;
+    }
+
+    #skillset li>i {
+        font-size: 1.5rem;
+    }
+
+    #skillset svg {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+#projects {
+    width: calc(100% - 2rem);
+    padding: 0 1rem 2rem 1rem;
 }
 
 #projects h2 {
-    width: 100%;
-    height: 10vh;
+    padding: 1.5rem 0 2rem 0;
     font-size: 2rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 
-#projects-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(4, 20rem);
-    grid-template-areas:
-    ". project-1 project-1 project-1 project-1 project-1 . . . ."
-    ". . . . project-2 project-2 project-2 project-2 project-2 ."
-    ". project-3 project-3 project-3 project-3 project-3 . . . ."
-    ". . . . project-4 project-4 project-4 project-4 project-4 .";
-    row-gap: 2rem;
-    padding-bottom: 0.1rem;
+#projects-container>div {
+    width: calc(100% - 2rem);
+    height: calc(200px - 2em);
+    background-color: var(--grey-1);
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+}
+
+#projects-container h3, #projects-container p, #projects-container a {
+    color: var(--white);
 }
 
 div.project-1 {
@@ -190,21 +390,9 @@ div.project-1 {
     background-size: cover;
 }
 
-div.project-1:hover {
-    background: linear-gradient(0.25turn, rgba(0, 10, 25, 0.5), rgba(0, 10, 25, 0.4)), url("./assets/projects/architect.png");
-    background-position: center;
-    background-size: cover;
-}
-
 div.project-2 {
     grid-area: project-2;
     background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.1), rgba(210, 210, 225, 0.2)), url("./assets/projects/spacefrens.png");
-    background-size: cover;
-    background-position: center;
-}
-
-div.project-2:hover {
-    background: linear-gradient(0.25turn, rgba(0, 0, 15, 0.3), rgba(0, 0, 15, 0.4)), url("./assets/projects/spacefrens.png");
     background-position: center;
     background-size: cover;
 }
@@ -212,12 +400,6 @@ div.project-2:hover {
 div.project-3 {
     grid-area: project-3;
     background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.1), rgba(225, 210, 225, 0.2)), url("./assets/projects/pokedex.png");
-    background-size: cover;
-    background-position: center;
-}
-
-div.project-3:hover {
-    background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("./assets/projects/pokedex.png");
     background-position: center;
     background-size: cover;
 }
@@ -225,40 +407,11 @@ div.project-3:hover {
 div.project-4 {
     grid-area: project-4;
     background: linear-gradient(0.25turn, rgba(90, 20, 10, 0.2), rgba(90, 20, 10, 0.1)), url("./assets/projects/platformer-crop.png");
-    background-size: cover;
     background-position: center;
-}
-
-div.project-4:hover {
-    grid-area: project-4;
-    background: linear-gradient(0.25turn, rgba(15, 10, 0, 0.5), rgba(15, 10, 0, 0.4)), url("./assets/projects/platformer-crop.png");
     background-size: cover;
-    background-position: center;
 }
 
-#projects-grid div {
-    padding: 0 16rem 0 5rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: right;
-}
-
-#projects-grid span {
-    display: flex; 
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-}
-
-#projects-grid h3 {
-    font-size: 1.8rem;
-}
-
-#projects-grid p {
-    font-size: 1.1rem;
-}
-
-#projects-grid p, #projects-grid a {
+#projects-container h3, #projects-container p, #projects-container a {
     width:fit-content;
     background: rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
@@ -266,46 +419,69 @@ div.project-4:hover {
     color: var(--white);
 }
 
-#projects-grid a {
-    text-decoration: none;
-}
-
-#projects-grid a:hover {
-    text-decoration: underline;
-}
-
-#projects-grid span>a {
+#projects-container span>a {
     margin-right: 1rem;
 }
 
-#projects-grid p>a{
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 0 0.2rem 0 0.2rem;
+#projects .fa-caret-down {
+    color: var(--grey-1);
 }
 
-#projects-grid div>a:not(:first-child) {
-    font-size: 1.1rem;
+#interests {
+    background-color: var(--orange-1);
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 500px) {
+
+    #projects h2 {
+        padding-bottom: 2.5rem;
+    }
+
+    #projects-container {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 20rem);
+        grid-template-areas:
+        ". project-1 project-1 project-1 project-1 project-1 project-1 . . ."
+        ". . . project-2 project-2 project-2 project-2 project-2 project-2 ."
+        ". project-3 project-3 project-3 project-3 project-3 project-3 . . ."
+        ". . . project-4 project-4 project-4 project-4 project-4 project-4 .";
+        row-gap: 1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    #projects-container>div {
+        height: auto;
+        width: auto;
+        margin-bottom: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    #projects {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #projects-container {
+        width: 1160px;
+    }
 }
 
 #interests h2 {
-    width: 100%;
-    height: 10%;
+    padding: 1.5rem 0;
     font-size: 2rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    text-align: center;
 }
 
-#interests-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 30vh);
-    grid-gap: 0;
-}
-
-#interests-grid>div {
+#interests-container>div {
+    height: 11rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -314,11 +490,22 @@ div.project-4:hover {
     background-size: cover;
 }
 
+#interests h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#interests li {
+    list-style-type: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 0.2rem;
+}
 
 .interests-exercise {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/exercise.jpeg");
 }
-
 
 .interests-music {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/music.jpeg");
@@ -340,20 +527,30 @@ div.project-4:hover {
     background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("./assets/interests/lifestyle.jpeg");
 }
 
-#interests h3 {
+#interests .fa-caret-down {
     color: var(--white);
-    font-size: 1.5rem;
 }
 
-#interests li {
-    list-style-type: none;
-    color: var(--white);
-    font-size: 1.2rem;
-    text-align: center;
-    padding-top: 0.2rem;
+#interests span {
+    padding-top: 2rem;
+}
+
+@media (min-width: 800px) {
+    #interests-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 30vh);
+        grid-gap: 0;
+    }
+
+    #interests-container>div {
+        height: auto;
+        }
+
 }
 
 footer {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -361,13 +558,33 @@ footer {
 }
 
 footer hr {
-    width: 10em;
-    height: 0.2em;
-    margin: 1em 0 2em 0;
+    width: 10rem;
+    height: 0.2rem;
+    margin: 1rem 0 2rem 0;
     border: none;
     background-color: var(--grey-1);
 }
 
-footer a {
-    margin: 0 1em 0 1em;
+footer div>a {
+    margin: 0 0.2rem;
+}
+
+footer span {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2rem;
+    height: 20%;
+    text-align: center;
+
+}
+
+footer span>a {
+    text-decoration: none;
+    color: var(--grey-1);
+}
+
+@media (min-width: 600px) {
+    footer p {
+        font-size: 1.2rem;
+    }
 }
