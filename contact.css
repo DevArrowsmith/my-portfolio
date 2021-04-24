@@ -68,6 +68,23 @@ textarea {
     height: 3rem;
 }
 
+@media (min-width: 500px) {
+    input {
+        height: 2rem;
+        width: calc(100% - 1rem);
+        padding: 0 0.5rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    textarea {
+        height: 5rem;
+        width: calc(100% - 1rem);
+        padding: 0.5rem;
+    }
+}
+
 .buttons {
     display: flex;
     flex-flow: row nowrap;
