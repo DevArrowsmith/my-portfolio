@@ -168,6 +168,10 @@ header .fa-caret-down {
     }
 }
 
+#about {
+    position: relative;
+}
+
 #about>div {
     height: 100%;
     width:60%;
@@ -198,8 +202,28 @@ header .fa-caret-down {
     color: var(--white);
 }
 
+#about>div>span {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
 #about .fa-caret-down {
     color: var(--grey-1);
+}
+
+@media (min-width: 600px) {
+    #about h2, #about p:first-of-type {
+        padding-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    #about p {
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
 }
 
 #skillset {
