@@ -1,0 +1,16 @@
+:root {
+    --white: #FFFFFF;
+    --grey-1: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--grey-1);
+    overflow-x: hidden;
+}
