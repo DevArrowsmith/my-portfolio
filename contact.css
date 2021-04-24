@@ -10,7 +10,46 @@
 }
 
 body {
+    height: calc(100vh);
+    width: 100vw;
     background-color: var(--white);
     color: var(--grey-1);
-    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div:first-of-type {
+    height: 60px;
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+    background-color: var(--grey-1);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#top-bar p:first-of-type {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#top-bar p:last-of-type {
+    color: var(--white);
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+div:nth-of-type(2) {
+    width: 60%;
+}
+
+svg {
+    width: 60%;
+    height: 150px;
 }
