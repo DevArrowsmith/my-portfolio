@@ -68,6 +68,12 @@ textarea {
     height: 3rem;
 }
 
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 li.button {
     display: flex;
     flex-flow: row-reverse;
@@ -101,4 +107,3 @@ svg {
     width: 60%;
     height: 150px;
 }
-
