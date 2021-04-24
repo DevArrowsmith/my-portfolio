@@ -68,7 +68,7 @@ header>div {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 2rem);
+    width: calc(100vw - 2rem);
     padding: 0 1rem 0 1rem;
     display: flex;
     flex-flow: row nowrap;
