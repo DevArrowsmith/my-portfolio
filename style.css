@@ -248,6 +248,7 @@ header .fa-caret-down {
 }
 
 #skillset ul {
+    max-width: 1000px;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
@@ -288,16 +289,59 @@ header .fa-caret-down {
     color: var(--white);
 }
 
+@media (min-width: 400px) {
+
+    #skillset>ul {
+        padding: 0 3rem;
+    }
+
+    #skillset ul>li {
+        width: 6.5rem;
+        font-size: 1.1rem;
+        margin: 0.7rem 1.2rem;
+    }
+
+    #skillset li>i {
+        font-size: 1.1rem;
+    }
+
+    #skillset svg {
+        height: 1.1rem;
+        width: 1.1rem;
+    }
+}
+
+
 @media (min-width: 500px) {
 
     #skillset>ul {
-        max-width: 1050px;
-        padding: 5rem;
+        padding: 0 3rem;
     }
 
-    #skillset li {
-        width: 18rem;
-        height: 3rem;
+    #skillset ul>li {
+        width: 8rem;
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+    }
+
+    #skillset li>i {
+        font-size: 1.2rem;
+    }
+
+    #skillset svg {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+    #skillset>ul {
+        padding: 0 3rem;
+    }
+
+    #skillset ul>li {
+        width: 10rem;
         font-size: 1.5rem;
         margin: 1rem 3rem;
     }
