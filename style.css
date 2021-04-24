@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 * {
@@ -46,9 +47,6 @@ header, #about, #skillset, footer {
 .fa-caret-down {
     font-size: 2rem;
 }
-
-
-
 
 header {
     padding-top: 60px;
