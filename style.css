@@ -30,7 +30,7 @@ header, section, footer {
     width: 100vw;
 }
 
-header, section:not(#projects), footer {
+header, #about, #skillset, footer {
     height: calc(100vh - 60px);
 }
 
@@ -294,3 +294,57 @@ div.project-4 {
 #projects-grid span>a {
     margin-right: 1rem;
 }
+
+#interests h2 {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#interests-container>div {
+    height: 11rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+
+#interests h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#interests li {
+    list-style-type: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 0.2rem;
+}
+
+.interests-exercise {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/exercise.jpeg");
+}
+
+.interests-music {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/music.jpeg");
+}
+
+.interests-reading {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/reading.jpeg");
+}
+
+.interests-tech {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/tech.jpeg");
+}
+
+.interests-gaming {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/gaming.jpeg");
+}
+
+.interests-lifestyle {
+    background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("./assets/interests/lifestyle.jpeg");
+}
+
