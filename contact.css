@@ -77,6 +77,14 @@ button {
     border: 1px solid var(--grey-1);
     border-radius: 3px;
     background-color: var(--white);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+i {
+    font-size: 1rem;
+    padding-left: 0.3rem;
 }
 
 svg {
@@ -84,3 +92,4 @@ svg {
     width: 60%;
     height: 150px;
 }
+
