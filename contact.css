@@ -1,6 +1,7 @@
 :root {
     --white: #FFFFFF;
     --grey-1: #242424;
+    --orange-1: #F68265;
 }
 
 * {
@@ -46,10 +47,40 @@ div:first-of-type {
 }
 
 div:nth-of-type(2) {
+    padding-top: 2rem;
     width: 60%;
 }
 
+li {
+    list-style-type: none;
+    padding-top: 0.5rem;
+}
+
+input, textarea {
+    margin-top: 0.2rem;
+    width: 100%;
+    border: 1px solid var(--grey-1);
+    border-radius: 3px;
+}
+
+textarea {
+    height: 3rem;
+}
+
+li.button {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+button {
+    padding: 0.1rem 0.4rem;
+    border: 1px solid var(--grey-1);
+    border-radius: 3px;
+    background-color: var(--white);
+}
+
 svg {
+    padding-top: 2rem;
     width: 60%;
     height: 150px;
 }
