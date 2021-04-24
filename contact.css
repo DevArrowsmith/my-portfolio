@@ -2,6 +2,7 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --orange-1: #F68265;
+    --red-1: #70ECFF;
 }
 
 * {
@@ -80,6 +81,14 @@ button {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+}
+
+button:hover {
+    background-color: var(--orange-1);
+}
+
+button:focus {
+    background-color: var(--red-1);
 }
 
 i {
