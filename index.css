@@ -559,7 +559,7 @@ footer {
 footer hr {
     width: 10rem;
     height: 0.2rem;
-    margin: 1rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     border: none;
     background-color: var(--grey-1);
 }
@@ -568,7 +568,19 @@ footer div>a {
     margin: 0 0.2rem;
 }
 
-footer span {
+footer span:first-of-type {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer span:first-of-type i {
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+footer span:last-of-type {
     position: absolute;
     bottom: 0;
     padding-bottom: 2rem;
