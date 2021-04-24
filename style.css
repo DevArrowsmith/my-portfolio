@@ -536,6 +536,20 @@ div.project-4 {
     padding-top: 2rem;
 }
 
+@media (min-width: 800px) {
+    #interests-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 30vh);
+        grid-gap: 0;
+    }
+
+    #interests-container>div {
+        height: auto;
+        }
+
+}
+
 footer {
     position: relative;
     display: flex;
