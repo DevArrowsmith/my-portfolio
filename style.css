@@ -16,7 +16,6 @@ html {
     font-family: 'Commissioner', sans-serif;
 }
 
-
 img {
     max-width: 50%;
 }
@@ -33,6 +32,22 @@ header, section, footer {
 header, #about, #skillset, footer {
     height: calc(100vh - 60px);
 }
+
+.section-link-container {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-caret-down {
+    font-size: 2rem;
+}
+
+
+
 
 header {
     padding-top: 60px;
@@ -123,8 +138,7 @@ header>p {
     padding-bottom: 4rem;
 }
 
-header>a>i {
-    font-size: 2rem;
+header .fa-caret-down {
     color: var(--grey-1);
 }
 
@@ -158,13 +172,7 @@ header>a>i {
     color: var(--white);
 }
 
-#about div>span {
-    text-align: center;
-}
-
-#about a>i {
-    margin-top: 1rem;
-    font-size: 2rem;
+#about .fa-caret-down {
     color: var(--grey-1);
 }
 
@@ -210,7 +218,7 @@ header>a>i {
     align-items: center;
 }
 
-#skillset i {
+#skillset li>i {
     fill: var(--white);
     font-size: 1rem;
 }
@@ -221,9 +229,7 @@ header>a>i {
     width: 1rem;
 }
 
-#skillset>a>i {
-    margin-top: 1rem;
-    font-size: 2rem;
+#skillset .fa-caret-down {
     color: var(--white);
 }
 
@@ -295,6 +301,10 @@ div.project-4 {
     margin-right: 1rem;
 }
 
+#projects .fa-caret-down {
+    color: var(--grey-1);
+}
+
 #interests h2 {
     padding: 1.5rem 0;
     font-size: 2rem;
@@ -348,3 +358,6 @@ div.project-4 {
     background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("./assets/interests/lifestyle.jpeg");
 }
 
+#interests .fa-caret-down {
+    color: var(--grey-1);
+}
