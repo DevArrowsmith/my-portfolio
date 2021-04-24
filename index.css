@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
+    overflow-x: hidden;
 }
 
 * {
@@ -174,7 +175,7 @@ header .fa-caret-down {
 
 #about>div {
     height: 100%;
-    width:60%;
+    width: 60%;
     padding: 0 20%;
     display: flex;
     flex-flow: column nowrap;
@@ -363,7 +364,6 @@ header .fa-caret-down {
 #projects h2 {
     padding: 1.5rem 0 2rem 0;
     font-size: 2rem;
-    width: 100%;
     text-align: center;
 }
 
@@ -427,11 +427,6 @@ div.project-4 {
     color: var(--grey-1);
 }
 
-#interests {
-    background-color: var(--orange-1);
-    padding-bottom: 2rem;
-}
-
 @media (min-width: 500px) {
 
     #projects h2 {
@@ -448,7 +443,6 @@ div.project-4 {
         ". project-3 project-3 project-3 project-3 project-3 project-3 . . ."
         ". . . project-4 project-4 project-4 project-4 project-4 project-4 .";
         row-gap: 1rem;
-        padding-bottom: 0.1rem;
     }
 
     #projects-container>div {
@@ -471,6 +465,11 @@ div.project-4 {
     #projects-container {
         width: 1160px;
     }
+}
+
+#interests {
+    background-color: var(--orange-1);
+    padding-bottom: 2rem;
 }
 
 #interests h2 {
@@ -557,10 +556,33 @@ footer {
     align-items: center;
 }
 
+
+footer span:first-of-type {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer span:first-of-type i {
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+footer h2 {
+    padding: 1rem;
+    border: 1px solid var(--grey-1);
+    border-radius: 3px;
+}
+
+footer span:first-of-type h2:hover {
+    text-decoration: underline;
+}
+
 footer hr {
     width: 10rem;
     height: 0.2rem;
-    margin: 1rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     border: none;
     background-color: var(--grey-1);
 }
@@ -569,7 +591,7 @@ footer div>a {
     margin: 0 0.2rem;
 }
 
-footer span {
+footer span:last-of-type {
     position: absolute;
     bottom: 0;
     padding-bottom: 2rem;
