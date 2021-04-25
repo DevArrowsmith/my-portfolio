@@ -1,0 +1,133 @@
+:root {
+    --white: #FFFFFF;
+    --grey-1: #242424;
+    --grey-2: #202020;
+    --grey-3: #484848;
+    --grey-4: #1a1c23;
+    --yellow-1: #F4EDDD;
+    --green-1: #58B09C;
+    --orange-1: #F68265;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--grey-1);
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 1;
+    height: 60px;
+    width: calc(100vw - 2rem);
+    padding: 0 1rem;
+    color: var(--white);
+    background-color: var(--grey-2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>p:first-of-type {
+    display: none;
+}
+
+header>p:last-of-type {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header i {
+    height: 60px;
+    width: calc(120px - 1rem);
+    text-align: right;
+    font-size: 2.4em;
+}
+
+header i:before {
+    line-height: 60px;
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    width: 120px;
+    background: var(--grey-2);
+    right: 0;
+    top: 100%;
+}
+
+header i:hover + nav, header i:focus + nav, header nav:hover, header nav:focus {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+header nav>a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header nav>a:hover {
+    background-color: var(--grey-3);
+}
+
+header nav>a:last-of-type {
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+    header>p:first-of-type {
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    header>p:last-of-type {
+        display: none;
+    }
+
+    header p {
+        font-size: 2rem;
+    }
+
+    header nav {
+        width: 200px;
+    }
+
+    header nav>a {
+        font-size: 2rem;
+    }
+}
+
+/* TODO: Section styles will go here. */
+
+section {
+    padding-top: 60px;
+    height: calc(50vh - 60px);
+    background-color: var(--orange-1)
+}
+
+footer {
+    height: 50vh;
+    background-color: var(--grey-4);
+    color: var(--white);
+}
