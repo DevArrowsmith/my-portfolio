@@ -2,6 +2,7 @@
     --white: #FFFFFF;
     --grey-1: #242424;
     --grey-2: #202020;
+    --grey-3: #484848;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
     --orange-1: #F68265;
@@ -118,6 +119,10 @@ header nav>a {
     font-size: 1.4rem;
     text-align: center;
     padding: 1rem 0;
+}
+
+header nav>a:hover {
+    background-color: var(--grey-3);
 }
 
 header nav>a:last-of-type {
