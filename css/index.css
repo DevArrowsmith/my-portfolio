@@ -265,6 +265,14 @@ footer {
     flex-flow: column nowrap;
 }
 
+@media (min-width: 900px) {
+    footer {
+        min-height: fit-content;
+        padding-bottom: 7rem;
+    }
+}
+
+
 footer img {
     width: 50px;
     border-radius: 25px;
