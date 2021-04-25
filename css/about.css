@@ -154,10 +154,79 @@ header nav>a:last-of-type {
 /* TODO: Section styles will go here. */
 
 section {
-    padding-top: 60px;
-    height: calc(50vh - 60px);
-    background-color: var(--yellow-1)
+    width: calc(100vw - 2rem);
+
+    background-color: var(--white);
+    padding: 60px 1rem 0 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.about {
+    width: calc(100% - 2rem);
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.about h1, .about p:first-of-type {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.skillset {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green-1);
+}
+
+.skillset * {
+    color: var(--white);
+}
+
+.skillset h2 {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.skillset ul {
+    max-width: 1000px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skillset ul li {
+    width: 6rem;
+    height: 2rem;
+    margin: 0.5rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillset li>i {
+    fill: var(--white);
+    font-size: 1rem;
+}
+
+.skillset svg {
+    fill: var(--white);
+    height: 1rem;
+    width: 1rem;
+}
+
+
+
+
 
 footer {
     position: relative;
