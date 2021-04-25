@@ -153,8 +153,6 @@ header nav>a:last-of-type {
     }
 }
 
-/* TODO: Section styles will go here. */
-
 section {
     width: calc(100vw - 2rem);
     margin-top: 60px;
@@ -167,6 +165,7 @@ section {
 }
 
 section>div {
+    max-width: 300px;
     margin: 2rem 1.8rem 0 1.8rem;
     display: flex;
     flex-flow: column nowrap;
@@ -175,8 +174,8 @@ section>div {
 
 section>div>img {
     width: 60vw;
-    max-width: 50vh;
-    max-height: 50vh;
+    max-width: 300px;
+    max-height: 300px;
     border-radius: 30vw;
     object-fit: cover;
     margin-bottom: 2rem;
@@ -191,7 +190,6 @@ section h2>span {
     padding: 0 0.4rem;
     color: var(--white);
 }
-
 
 section a {
     width: calc(100% - 0.8rem);
@@ -237,8 +235,24 @@ section a:last-of-type:hover {
     background-color: var(--black-2);
 }
 
+@media (min-width: 900px) {
+    section {
+        width: 80%;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+}
 
+@media (min-width: 1000px) {
+    section {
+        width: 800px;
+        padding: 0 calc(calc(100% - 800px) / 2);
+        flex-flow: row nowrap;
+        justify-content: space-between;
 
+    }
+}
 
 footer {
     position: relative;
@@ -310,4 +324,3 @@ footer>hr {
     bottom: 2rem;
     border-color: var(--white);
 }
-
