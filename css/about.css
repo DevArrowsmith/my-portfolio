@@ -14,6 +14,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
+    overflow-x: hidden;
 }
 
 * {
@@ -23,9 +24,9 @@ html {
 }
 
 body {
+    width: 100vw;
     background-color: var(--white);
     color: var(--grey-1);
-    overflow-x: hidden;
 }
 
 header {
@@ -161,6 +162,7 @@ section {
 footer {
     position: relative;
     min-height: calc(100vh - 7rem - 60px);
+    width: calc(100% - 4rem);
     padding: 2rem 2rem 5rem 2rem;
     background-color: var(--black-1);
     color: var(--white);
