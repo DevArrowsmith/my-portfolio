@@ -155,7 +155,7 @@ header nav>a:last-of-type {
 section {
     padding-top: 60px;
     height: calc(50vh - 60px);
-    background-color: var(--orange-1)
+    background-color: var(--white)
 }
 
 footer {
