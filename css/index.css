@@ -153,13 +153,9 @@ header nav>a:last-of-type {
 
 /* TODO: Section styles will go here. */
 
-img {
-    width: 200px;
-}
-
 section {
     width: calc(100vw - 2rem);
-    padding-top: 60px;
+    margin-top: 60px;
     background-color: var(--orange-1);
     padding: 0 1rem;
     display: flex;
@@ -169,14 +165,30 @@ section {
 }
 
 section>div:first-of-type {
-    width: 250px;
+    margin: 2rem 1.8rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
+section>div>img {
+    width: 60vw;
+    max-width: 50vh;
+    max-height: 50vh;
+    border-radius: 30vw;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
 
+section h2 {
+    margin-bottom: 1rem;
+}
 
-
-
-
+section h2>span {
+    background: var(--grey-1);
+    padding: 0 0.4rem;
+    color: var(--white);
+}
 
 footer {
     position: relative;
