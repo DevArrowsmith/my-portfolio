@@ -163,12 +163,25 @@ section {
     align-items: center;
 }
 
+@media (min-width: 640px) {
+    section {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+}
+
 .about {
     width: calc(100% - 4rem);
     padding: 2rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+}
+
+@media (min-width: 640px) {
+    .about {
+        width: calc(50% - 4rem)
+    }
 }
 
 .about h1, .about p:first-of-type {
@@ -188,6 +201,7 @@ section {
 }
 
 .skillset {
+    width: 100%;
     padding: 2rem 0;
     display: flex;
     flex-flow: column nowrap;
@@ -195,6 +209,13 @@ section {
     align-items: center;
     background-color: var(--green-1);
 }
+
+@media (min-width: 640px) {
+    .skillset {
+        width: 50%;
+    }
+}
+
 
 .skillset * {
     color: var(--white);
