@@ -184,6 +184,18 @@ section {
     }
 }
 
+@media (min-width: 1200px) {
+    .about {
+        width: calc(40% - 4rem)
+    }
+}
+
+@media (min-width: 1600px) {
+    .skillset {
+        width: calc(30% - 4rem);
+    }
+}
+
 .about h1, .about p:first-of-type {
     padding-bottom: 1rem;
     font-size: 2rem;
@@ -213,6 +225,18 @@ section {
 @media (min-width: 640px) {
     .skillset {
         width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skillset {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .skillset {
+        width: 70%;
     }
 }
 
@@ -253,6 +277,18 @@ section {
     fill: var(--white);
     height: 1rem;
     width: 1rem;
+}
+
+@media (min-width: 640px) {
+    .skillset>ul {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skillset>ul {
+        max-width: 700px;
+    }
 }
 
 footer {
