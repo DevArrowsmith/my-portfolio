@@ -5,6 +5,7 @@
     --grey-3: #484848;
     --black-1: #1a1c23;
     --black-2: #23252F;
+    --black-3: #2B2E3B;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
     --orange-1: #F68265;
@@ -164,8 +165,8 @@ section {
     align-items: center;
 }
 
-section>div:first-of-type {
-    margin: 2rem 1.8rem;
+section>div {
+    margin: 2rem 1.8rem 0 1.8rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -189,6 +190,32 @@ section h2>span {
     padding: 0 0.4rem;
     color: var(--white);
 }
+
+
+section a {
+    width: calc(100% - 0.8rem);
+    height: 4rem;
+    padding: 0.2rem 0.4rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+section a:first-of-type {
+    background-color: var(--black-1);
+}
+
+section a:nth-of-type(2) {
+    background-color: var(--black-2);
+}
+
+section a:last-of-type {
+    background-color: var(--black-3);
+}
+
+
+
 
 footer {
     position: relative;
