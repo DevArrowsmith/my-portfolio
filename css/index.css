@@ -390,28 +390,28 @@ header .fa-caret-down {
 
 div.project-1 {
     grid-area: project-1;
-    background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.1), rgba(200, 210, 225, 0.2)), url("./assets/projects/architect.png");
+    background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.1), rgba(200, 210, 225, 0.2)), url("../assets/projects/architect.png");
     background-position: center;
     background-size: cover;
 }
 
 div.project-2 {
     grid-area: project-2;
-    background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.1), rgba(210, 210, 225, 0.2)), url("./assets/projects/spacefrens.png");
+    background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.1), rgba(210, 210, 225, 0.2)), url("../assets/projects/spacefrens.png");
     background-position: center;
     background-size: cover;
 }
 
 div.project-3 {
     grid-area: project-3;
-    background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.1), rgba(225, 210, 225, 0.2)), url("./assets/projects/pokedex.png");
+    background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.1), rgba(225, 210, 225, 0.2)), url("../assets/projects/pokedex.png");
     background-position: center;
     background-size: cover;
 }
 
 div.project-4 {
     grid-area: project-4;
-    background: linear-gradient(0.25turn, rgba(90, 20, 10, 0.2), rgba(90, 20, 10, 0.1)), url("./assets/projects/platformer-crop.png");
+    background: linear-gradient(0.25turn, rgba(90, 20, 10, 0.2), rgba(90, 20, 10, 0.1)), url("../assets/projects/platformer-crop.png");
     background-position: center;
     background-size: cover;
 }
@@ -508,7 +508,7 @@ div.project-4 {
 }
 
 .interests-exercise {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/exercise.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../assets/interests/exercise.jpeg");
 }
 
 .interests-music {
@@ -516,19 +516,19 @@ div.project-4 {
 }
 
 .interests-reading {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/reading.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../assets/interests/reading.jpeg");
 }
 
 .interests-tech {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/tech.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../assets/interests/tech.jpeg");
 }
 
 .interests-gaming {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("./assets/interests/gaming.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../assets/interests/gaming.jpeg");
 }
 
 .interests-lifestyle {
-    background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("./assets/interests/lifestyle.jpeg");
+    background: linear-gradient(rgba(0, 40, 60, 0.5), rgba(0, 40, 60, 0.5)),  url("../assets/interests/lifestyle.jpeg");
 }
 
 #interests .fa-caret-down {
