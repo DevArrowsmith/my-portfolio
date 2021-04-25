@@ -128,8 +128,9 @@ section {
 }
 
 footer {
-    height: 100vh;
-    padding: 2rem;
+    position: relative;
+    min-height: calc(100vh - 7rem - 60px);
+    padding: 2rem 2rem 5rem 2rem;
     background-color: var(--black-1);
     color: var(--white);
     display: flex;
@@ -190,6 +191,9 @@ footer>div>a {
 }
 
 footer>hr {
+    position: absolute;
+    width: calc(100vw - 4rem);
+    bottom: 2rem;
     border-color: var(--white);
 }
 
