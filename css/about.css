@@ -219,7 +219,7 @@ section {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--green-1);
+    background-color: var(--black-2);
 }
 
 @media (min-width: 640px) {
