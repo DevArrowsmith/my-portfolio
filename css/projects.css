@@ -242,31 +242,38 @@ div.project-4 {
         height: auto;
         width: auto;
         margin-bottom: none;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
+        transition-duration: 0.4s;
     }
 
+    .projects-container>div:hover {
+        transform: translate(0, -0.4rem);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
+        transition-duration: 0.4s;
+    }
+
+
     div.project-1:hover {
-        grid-area: project-1;
         background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/architect.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-2:hover {
-        grid-area: project-2;
         background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/spacefrens.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-3:hover {
-        grid-area: project-3;
         background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/pokedex.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-4:hover {
-        grid-area: project-4;
         background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/platformer-crop.png");
         background-position: center;
         background-size: cover;
