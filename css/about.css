@@ -3,10 +3,8 @@
     --grey-1: #242424;
     --grey-2: #202020;
     --grey-3: #484848;
-    --black: #000000;
     --black-1: #1a1c23;
     --black-2: #23252F;
-    --black-3: #2B2E3B;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
     --orange-1: #F68265;
@@ -153,104 +151,158 @@ header nav>a:last-of-type {
     }
 }
 
+/* TODO: Section styles will go here. */
+
 section {
-    width: calc(100vw - 2rem);
-    background-color: var(--orange-1);
-    padding: 60px 1rem 0 1rem;
+    width: 100vw;
+    background-color: var(--white);
+    padding-top: 60px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
 }
 
-section>div {
-    max-width: 300px;
-    margin: 2rem 1.8rem 0 1.8rem;
+@media (min-width: 640px) {
+    section {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+}
+
+.about {
+    width: calc(100% - 4rem);
+    padding: 2rem;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    justify-content: center;
 }
 
-section>div>img {
-    width: 60vw;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 30vw;
-    object-fit: cover;
-    margin-bottom: 2rem;
+@media (min-width: 640px) {
+    .about {
+        width: calc(50% - 4rem)
+    }
 }
 
-section h2 {
-    margin-bottom: 1rem;
+@media (min-width: 1200px) {
+    .about {
+        width: calc(40% - 4rem)
+    }
 }
 
-section h2>span {
+@media (min-width: 1600px) {
+    .skillset {
+        width: calc(30% - 4rem);
+    }
+}
+
+.about h1, .about p:first-of-type {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about p>span {
     background: var(--grey-1);
     padding: 0 0.4rem;
     color: var(--white);
 }
 
-section a {
-    width: calc(100% - 0.8rem);
-    height: 4rem;
-    padding: 0.2rem 0.4rem;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    color: var(--white);
+.about p {
+    padding-bottom: 1rem;
     font-size: 1.4rem;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
 }
 
-section a:hover {
-    transform: translate(0, -0.4rem);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
-}
-
-section a:first-of-type {
-    background-color: var(--black-1);
-}
-
-section a:first-of-type:hover {
-    background-color: var(--black);
-}
-
-section a:nth-of-type(2) {
+.skillset {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--black-2);
 }
 
-section a:nth-of-type(2):hover {
-    background-color: var(--black-1);
-}
-
-section a:last-of-type {
-    background-color: var(--black-3);
-}
-
-section a:last-of-type:hover {
-    background-color: var(--black-2);
-}
-
-@media (min-width: 900px) {
-    section {
-        width: 80%;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 60px 10% 3rem 10%;
+@media (min-width: 640px) {
+    .skillset {
+        width: 50%;
     }
 }
 
-@media (min-width: 1000px) {
-    section {
-        width: 800px;
-        padding-left: calc(calc(100% - 800px) / 2);
-        padding-right: calc(calc(100% - 800px) / 2);
-        flex-flow: row nowrap;
-        justify-content: space-between;
+@media (min-width: 1200px) {
+    .skillset {
+        width: 60%;
+    }
+}
 
+@media (min-width: 1600px) {
+    .skillset {
+        width: 70%;
+    }
+}
+
+
+.skillset * {
+    color: var(--white);
+}
+
+.skillset h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.skillset ul {
+    max-width: 1000px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skillset ul li {
+    width: 6rem;
+    height: 2rem;
+    margin: 0.5rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillset li>i {
+    font-size: 1rem;
+}
+
+.skillset svg {
+    fill: var(--white);
+    height: 1rem;
+    width: 1rem;
+}
+
+@media (min-width: 640px) {
+    .skillset>ul {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skillset>ul {
+        max-width: 700px;
+    }
+
+    .skillset ul>li {
+        width: 8rem;
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+    }
+
+    .skillset li>i {
+        font-size: 1.2rem;
+    }
+
+    .skillset svg {
+        height: 1.2rem;
+        width: 1.2rem;
     }
 }
 
@@ -271,7 +323,6 @@ footer {
         padding-bottom: 7rem;
     }
 }
-
 
 footer img {
     width: 50px;

@@ -1,12 +1,11 @@
 :root {
     --white: #FFFFFF;
+    --black-filter: rgba(15, 15, 30, 0.3);
     --grey-1: #242424;
     --grey-2: #202020;
     --grey-3: #484848;
-    --black: #000000;
     --black-1: #1a1c23;
     --black-2: #23252F;
-    --black-3: #2B2E3B;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
     --orange-1: #F68265;
@@ -154,103 +153,145 @@ header nav>a:last-of-type {
 }
 
 section {
-    width: calc(100vw - 2rem);
-    background-color: var(--orange-1);
+    width: calc(100% - 2rem);
     padding: 60px 1rem 0 1rem;
+    background-color: var(--white);
+}
+
+h1 {
+    padding: 1.5rem 0 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.projects-container>div {
+    width: calc(100% - 2rem);
+    height: calc(200px - 2em);
+    background-color: var(--grey-1);
+    padding: 1rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
 }
 
-section>div {
-    max-width: 300px;
-    margin: 2rem 1.8rem 0 1.8rem;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+div.project-1 {
+    grid-area: project-1;
+    background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.1), rgba(200, 210, 225, 0.2)), url("../assets/projects/architect.png");
+    background-position: center;
+    background-size: cover;
 }
 
-section>div>img {
-    width: 60vw;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 30vw;
-    object-fit: cover;
-    margin-bottom: 2rem;
+div.project-2 {
+    grid-area: project-2;
+    background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.1), rgba(210, 210, 225, 0.2)), url("../assets/projects/spacefrens.png");
+    background-position: center;
+    background-size: cover;
 }
 
-section h2 {
+div.project-3 {
+    grid-area: project-3;
+    background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.1), rgba(225, 210, 225, 0.2)), url("../assets/projects/pokedex.png");
+    background-position: center;
+    background-size: cover;
+}
+
+div.project-4 {
+    grid-area: project-4;
+    background: linear-gradient(0.25turn, rgba(90, 20, 10, 0.2), rgba(90, 20, 10, 0.1)), url("../assets/projects/platformer-crop.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.projects-container h2, .projects-container p, .projects-container a {
+    width:fit-content;
+    background: rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
-}
-
-section h2>span {
-    background: var(--grey-1);
-    padding: 0 0.4rem;
+    padding: 0.2rem 0.5rem;
     color: var(--white);
 }
 
-section a {
-    width: calc(100% - 0.8rem);
-    height: 4rem;
-    padding: 0.2rem 0.4rem;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    color: var(--white);
-    font-size: 1.4rem;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
+.projects-container h2 {
+    font-size: 1.25rem;
 }
 
-section a:hover {
-    transform: translate(0, -0.4rem);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
+.projects-container span>a {
+    margin-right: 1rem;
 }
 
-section a:first-of-type {
-    background-color: var(--black-1);
-}
+@media (min-width: 500px) {
 
-section a:first-of-type:hover {
-    background-color: var(--black);
-}
-
-section a:nth-of-type(2) {
-    background-color: var(--black-2);
-}
-
-section a:nth-of-type(2):hover {
-    background-color: var(--black-1);
-}
-
-section a:last-of-type {
-    background-color: var(--black-3);
-}
-
-section a:last-of-type:hover {
-    background-color: var(--black-2);
-}
-
-@media (min-width: 900px) {
-    section {
-        width: 80%;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 60px 10% 3rem 10%;
+    h1 {
+        padding-bottom: 2.5rem;
     }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: repeat(4, 20rem);
+        grid-template-areas:
+        ". project-1 project-1 project-1 project-1 project-1 project-1 . . ."
+        ". . . project-2 project-2 project-2 project-2 project-2 project-2 ."
+        ". project-3 project-3 project-3 project-3 project-3 project-3 . . ."
+        ". . . project-4 project-4 project-4 project-4 project-4 project-4 .";
+        row-gap: 1rem;
+    }
+
+    .projects-container>div {
+        height: auto;
+        width: auto;
+        margin-bottom: none;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
+        transition-duration: 0.4s;
+    }
+
+    .projects-container>div:hover {
+        transform: translate(0, -0.4rem);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
+        transition-duration: 0.4s;
+    }
+
+
+    div.project-1:hover {
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/architect.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    div.project-2:hover {
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/spacefrens.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    div.project-3:hover {
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/pokedex.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    div.project-4:hover {
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/platformer-crop.png");
+        background-position: center;
+        background-size: cover;
+    }
+
 }
 
-@media (min-width: 1000px) {
-    section {
-        width: 800px;
-        padding-left: calc(calc(100% - 800px) / 2);
-        padding-right: calc(calc(100% - 800px) / 2);
-        flex-flow: row nowrap;
-        justify-content: space-between;
+@media (min-width: 1200px) {
 
+    section {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects-container {
+        width: 1160px;
     }
 }
 
@@ -271,7 +312,6 @@ footer {
         padding-bottom: 7rem;
     }
 }
-
 
 footer img {
     width: 50px;
@@ -332,3 +372,4 @@ footer>hr {
     bottom: 2rem;
     border-color: var(--white);
 }
+

@@ -3,10 +3,8 @@
     --grey-1: #242424;
     --grey-2: #202020;
     --grey-3: #484848;
-    --black: #000000;
     --black-1: #1a1c23;
     --black-2: #23252F;
-    --black-3: #2B2E3B;
     --yellow-1: #F4EDDD;
     --green-1: #58B09C;
     --orange-1: #F68265;
@@ -153,105 +151,12 @@ header nav>a:last-of-type {
     }
 }
 
+/* TODO: Section styles will go here. */
+
 section {
-    width: calc(100vw - 2rem);
-    background-color: var(--orange-1);
-    padding: 60px 1rem 0 1rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-section>div {
-    max-width: 300px;
-    margin: 2rem 1.8rem 0 1.8rem;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-section>div>img {
-    width: 60vw;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 30vw;
-    object-fit: cover;
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    margin-bottom: 1rem;
-}
-
-section h2>span {
-    background: var(--grey-1);
-    padding: 0 0.4rem;
-    color: var(--white);
-}
-
-section a {
-    width: calc(100% - 0.8rem);
-    height: 4rem;
-    padding: 0.2rem 0.4rem;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    color: var(--white);
-    font-size: 1.4rem;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
-}
-
-section a:hover {
-    transform: translate(0, -0.4rem);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.2, 0.5, 0.7);
-    transition-duration: 0.4s;
-}
-
-section a:first-of-type {
-    background-color: var(--black-1);
-}
-
-section a:first-of-type:hover {
-    background-color: var(--black);
-}
-
-section a:nth-of-type(2) {
-    background-color: var(--black-2);
-}
-
-section a:nth-of-type(2):hover {
-    background-color: var(--black-1);
-}
-
-section a:last-of-type {
-    background-color: var(--black-3);
-}
-
-section a:last-of-type:hover {
-    background-color: var(--black-2);
-}
-
-@media (min-width: 900px) {
-    section {
-        width: 80%;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 60px 10% 3rem 10%;
-    }
-}
-
-@media (min-width: 1000px) {
-    section {
-        width: 800px;
-        padding-left: calc(calc(100% - 800px) / 2);
-        padding-right: calc(calc(100% - 800px) / 2);
-        flex-flow: row nowrap;
-        justify-content: space-between;
-
-    }
+    padding-top: 60px;
+    height: calc(50vh - 60px);
+    background-color: var(--orange-1)
 }
 
 footer {
@@ -271,7 +176,6 @@ footer {
         padding-bottom: 7rem;
     }
 }
-
 
 footer img {
     width: 50px;
@@ -332,3 +236,4 @@ footer>hr {
     bottom: 2rem;
     border-color: var(--white);
 }
+
