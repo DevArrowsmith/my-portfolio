@@ -155,8 +155,73 @@ header nav>a:last-of-type {
 
 section {
     padding-top: 60px;
-    height: calc(50vh - 60px);
-    background-color: var(--green-1)
+    background-color: var(--white);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-form-container {
+    padding-top: 2rem;
+    width: 60%;
+    max-width: 420px;
+}
+
+li {
+    list-style-type: none;
+    padding-top: 0.5rem;
+}
+
+input, textarea {
+    margin-top: 0.2rem;
+    width: 100%;
+    border: 1px solid var(--grey-1);
+    border-radius: 3px;
+}
+
+textarea {
+    height: 3rem;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+li.button {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+button {
+    padding: 0.1rem 0.4rem;
+    border: 1px solid var(--grey-1);
+    border-radius: 3px;
+    background-color: var(--white);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+button:hover {
+    background-color: var(--orange-1);
+}
+
+button:focus {
+    background-color: var(--red-1);
+}
+
+i {
+    font-size: 1rem;
+    padding-left: 0.3rem;
+}
+
+svg {
+    padding-top: 2rem;
+    width: 60%;
+    height: 150px;
 }
 
 footer {
