@@ -1,5 +1,6 @@
 :root {
     --white: #FFFFFF;
+    --black-filter: rgba(15, 15, 30, 0.3);
     --grey-1: #242424;
     --grey-2: #202020;
     --grey-3: #484848;
@@ -245,28 +246,28 @@ div.project-4 {
 
     div.project-1:hover {
         grid-area: project-1;
-        background: linear-gradient(0.25turn, rgba(200, 210, 225, 0.3), rgba(200, 210, 225, 0.3)), url("../assets/projects/architect.png");
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/architect.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-2:hover {
         grid-area: project-2;
-        background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.3), rgba(210, 210, 225, 0.3)), url("../assets/projects/spacefrens.png");
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/spacefrens.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-3:hover {
         grid-area: project-3;
-        background: linear-gradient(0.25turn, rgba(210, 225, 225, 0.3), rgba(225, 210, 225, 0.3)), url("../assets/projects/pokedex.png");
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/pokedex.png");
         background-position: center;
         background-size: cover;
     }
     
     div.project-4:hover {
         grid-area: project-4;
-        background: linear-gradient(0.25turn, rgba(210, 210, 255, 0.1), rgba(210, 210, 225, 0.1)), url("../assets/projects/platformer-crop.png");
+        background: linear-gradient(0.25turn, var(--black-filter), var(--black-filter)), url("../assets/projects/platformer-crop.png");
         background-position: center;
         background-size: cover;
     }
