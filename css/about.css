@@ -289,6 +289,21 @@ section {
     .skillset>ul {
         max-width: 700px;
     }
+
+    .skillset ul>li {
+        width: 8rem;
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+    }
+
+    .skillset li>i {
+        font-size: 1.2rem;
+    }
+
+    .skillset svg {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
 }
 
 footer {
